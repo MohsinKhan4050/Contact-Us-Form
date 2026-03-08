@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: aqua;
+    min-height: 100vh;
+}
+
+.contact_form {
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    display: flex;
+    gap: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px #333;
+}
+
+
+/* ----contact detaisl----- */
+.contact_details {
+    text-align: center;
+    padding-right: 30px;
+    position: relative;
+}
+
+.contact_details::after {
+    content: "";
+    background-color: blue;
+    width: 2px;
+    height: 70%;
+    position: absolute;
+    right: 0;
+    top: 10%;
+}
+
+.contact_details i {
+    color: blue;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact_details p {
+    color: #333;
+    line-height: 25px;
+}
+
+.contact_details .address {
+    margin-bottom: 20px;
+}
+
+.contact_details .phone {
+    margin-bottom: 20px;
+}
+
+/* ------message us----- */
+
+.message_us h3 {
+    color: blue;
+    margin-bottom: 10px;
+}
+
+.contact_form p {
+    color: #333;
+}
+
+.message_us form input {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.message_us form input:focus,
+.message_us form textarea:focus {
+    outline: none;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.message_us form textarea {
+    width: 100%;
+    background-color: aliceblue;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.message_us .send_btn {
+    display: inline-block;
+    background-color: blue;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.message_us .send_btn:hover {
+    background-color: rgba(0, 0, 255, 0.863);
+}
+
+/* ----media query for responsive --------- */
+
+@media(max-width:700px) {
+    .contact_form {
+        flex-direction: column;
+    }
+
+    .contact_details {
+        border-bottom: 1px solid blue;
+        padding-bottom: 20px;
+    }
+
+    .contact_details::after {
+        width: 0;
+        height: 0;
+    }
+
+}
